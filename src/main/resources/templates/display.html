@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content = "text/html; charset=UTF-8"/>
+    <title>Resume Database</title>
+</head>
+<style>
+
+    .bdy{
+        background: linear-gradient(orange,lightgray);
+
+
+    }
+    #tab{
+        margin:100px 100px 100px 100px;
+        color:darkslateblue;
+        font-size: 35px;
+        font-family: "Times New Roman";
+        text-align: center;
+
+    }
+
+    #btn{
+        font-size:20px;
+        margin-right:10px;
+        border:2px solid blue;
+        text-decoration: none;
+        background-color:orange;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+    }
+
+</style>
+
+
+
+<body class="bdy">
+
+<table id ="tab" border="3">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Organization</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+
+    <tr th:each="choose : ${resumeList}">
+        <td th:text="${choose.name}"></td>
+        <td th:text="${choose.email}"></td>
+        <td th:text="${choose.organisation}"></td>
+        <td th:text="${#dates.format(choose.startDate,'dd-MMM-yyyy')}"></td>
+        <td th:text="${#dates.format(choose.endDate, 'dd-MMM-yyyy')}"></td>
+
+    </tr>
+
+</table>
+
+<h3><a id="btn" href="/addInfo"> add Info </a></h3>
+
+</body>
+</html>

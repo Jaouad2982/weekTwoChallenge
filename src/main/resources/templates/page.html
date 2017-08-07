@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>first page </title>
+    
+    <style>
+
+        .col{
+            background:radial-gradient(blue,yellow);
+
+        }
+        .container{
+            border:10px 10px 10px 10px;
+            border-style:ridge;
+            border-color:beige;
+            border-radius:40px;
+            margin-top: 200px;
+            text-align: center;
+            font-family:"Times New Roman";
+            font-size:50px;
+        }
+        .h{
+            font-weight:bolder;
+            font-size:100px;
+            background: linear-gradient(white,purple);
+            margin-right:100px;
+            text-align: center;
+            margin-left:100px;
+            border-color:rgb(100,125,20);
+            -webkit-border-radius:60px;
+        }
+    </style>
+    
+    
+</head>
+<body class="col">
+<h1 class="h"> Welcome to my page </h1>
+<div class = "container" >
+<p> This application is used to add resumes and save them into a database . you will also be able to add, check and display
+you search result. </p>
+<h3><a href = "/addInfo"> add Info </a></h3>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head lang="en" >
+    <meta  charset="UTF-8" />
+    <title>add info page </title>
+    <style>
+        body{
+            background : linear-gradient(purple,white,black,orange);
+        }
+
+        .container{
+            border:10px 10px 10px 10px;
+            border-style:ridge;
+            border-color:beige;
+            border-radius:40px;
+            margin-top: 200px;
+            text-align: center;
+            font-family:"Times New Roman";
+            font-size:50px;
+        }
+        .hone{
+            margin-top: -180px;
+            font-weight:bolder;
+            font-size:100px;
+            background: linear-gradient(white,purple);
+            margin-right:100px;
+            text-align: center;
+            margin-left:100px;
+            border-color:rgb(100,125,20);
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            border-radius: 60px;
+        }
+        .sub{
+            font-size: 50px;
+            background:linear-gradient(blue,violet,black);
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            border-radius: 40px;
+
+        }
+
+    </style>
+</head>
+<h1 class="hone"> add Info page </h1>
+
+
+<body class="container">
+<form action="#" th:action="@{/addInfo}" th:object="${newRobo}" method="post">
+
+    <p>Enter the name : <input class="sub" type = "text" th:field = "*{name}" th:required="required"/></p>
+    <p>Enter the email : <input class="sub" type = "email" th:field = "*{email}"/></p>
+    <p>Enter the organisation : <input class="sub" type = "text" th:field = "*{organisation}"/></p>
+    <p>Enter the startDate : <input class="sub" type ="text" th:field = "*{startDate}" th:required="required"/></p>
+    <p>Enter the endDate : <input class="sub" type = "text" th:field = "*{endDate}" th:required="required"/></p>
+    <p> <input class="sub"  type = "submit" value="add Info"/></p>
+
+
+</form>
+
+</body>
+</html>
